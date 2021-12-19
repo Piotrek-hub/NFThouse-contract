@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.10+commit.fc410830"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -19,20 +19,48 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					},
+					{
 						"internalType": "string",
-						"name": "URI",
+						"name": "_URI",
 						"type": "string"
 					}
 				],
 				"name": "addNewHouse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "addressToUser",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "soldHouses",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boughtHouses",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalMoneySpend",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -43,12 +71,40 @@
 						"type": "uint256"
 					}
 				],
-				"name": "getOwnerOfHouse",
+				"name": "buyHouse",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "houseIdToHouse",
 				"outputs": [
 					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
 						"internalType": "address",
-						"name": "",
+						"name": "owner",
 						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "isForSale",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -179,10 +235,10 @@
 			]
 		},
 		"contracts/RealEstateContract.sol": {
-			"keccak256": "0x5851ae2a63822ffcb79779bc6b2e97a68e6b54d4687b7363e18f98b759292366",
+			"keccak256": "0x57abd908e9d324a378b195c2e2cc0d9676763e4d9314c39e15eb5761f5e2b4be",
 			"urls": [
-				"bzz-raw://7f14ff4235a60d6a47534c190271b2166042fbf8253144c1e3b10586782142ce",
-				"dweb:/ipfs/QmcY9an73TTF5w8e3HGNj3WEjH88UNE1WMV3aED35x2TD6"
+				"bzz-raw://6c350cee0aebd3f8bfa3004e6ad59b6a5884ee574f5a59150ea83ec7ed619473",
+				"dweb:/ipfs/QmYnPPJdLKSkyUykbzaeShfT4tGQUDzo3f1ZHjCDUNHwv1"
 			]
 		}
 	},
