@@ -3,6 +3,11 @@ pragma solidity ^0.8.0;
 import "./House.sol";
 
 contract RealEstateContract {
+    event houseAdded(
+        uint houseId,
+        string houseURI
+    );
+
     House houseNFT;
 
     struct house {
@@ -23,7 +28,7 @@ contract RealEstateContract {
     mapping(uint => house) public houseIdToHouse;
 
 
-    constructor(House _houseNFT) public {
+    constructor(House _houseNFT) {
         houseNFT = _houseNFT;
     }
 
@@ -37,6 +42,9 @@ contract RealEstateContract {
 
         // Assing house id to house (mapping)
         houseIdToHouse[houseId] = house(houseId, _price, msg.sender, true);
+
+        // Emitting events
+        emit houseAdded(houseId, _URI);
 
     }
 

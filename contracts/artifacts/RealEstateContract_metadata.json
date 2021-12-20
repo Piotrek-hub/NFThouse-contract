@@ -17,6 +17,25 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "houseId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "houseURI",
+						"type": "string"
+					}
+				],
+				"name": "houseAdded",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -253,10 +272,10 @@
 			]
 		},
 		"contracts/RealEstateContract.sol": {
-			"keccak256": "0x0ef3c3706d55116aa240b0abd077bcaa9e31bd8a300dfeffec17fea54b93f90b",
+			"keccak256": "0xea21dbeb182fbb2447bd3ca6ca76bf0c6c54aab34a53ccac31617592ea10391c",
 			"urls": [
-				"bzz-raw://80c9a8f043df65bd906d7f7ff731c6bc613ae6cf97eeb696e693b03e153dc228",
-				"dweb:/ipfs/QmajqWN6b2F6EKjrje8KBJE3axouhdTRTp89hdr17WtVF9"
+				"bzz-raw://94765f78d79e5e20ed2a94ad02226eb4947795b8e7638c1d5a956c2b7698d39d",
+				"dweb:/ipfs/QmUKM1yQ9vcSLYTSGP8QP9EZHR9v81nb2zM79wxr26YmU8"
 			]
 		}
 	},
