@@ -20,13 +20,31 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_price",
+						"name": "_houseId",
 						"type": "uint256"
 					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "addExisitingHouse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
 						"internalType": "string",
 						"name": "_URI",
 						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
 					}
 				],
 				"name": "addNewHouse",
@@ -235,10 +253,10 @@
 			]
 		},
 		"contracts/RealEstateContract.sol": {
-			"keccak256": "0x57abd908e9d324a378b195c2e2cc0d9676763e4d9314c39e15eb5761f5e2b4be",
+			"keccak256": "0x0ef3c3706d55116aa240b0abd077bcaa9e31bd8a300dfeffec17fea54b93f90b",
 			"urls": [
-				"bzz-raw://6c350cee0aebd3f8bfa3004e6ad59b6a5884ee574f5a59150ea83ec7ed619473",
-				"dweb:/ipfs/QmYnPPJdLKSkyUykbzaeShfT4tGQUDzo3f1ZHjCDUNHwv1"
+				"bzz-raw://80c9a8f043df65bd906d7f7ff731c6bc613ae6cf97eeb696e693b03e153dc228",
+				"dweb:/ipfs/QmajqWN6b2F6EKjrje8KBJE3axouhdTRTp89hdr17WtVF9"
 			]
 		}
 	},

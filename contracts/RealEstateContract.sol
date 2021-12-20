@@ -28,7 +28,7 @@ contract RealEstateContract {
     }
 
     // Function that creates nft 
-    function addNewHouse(uint _price, string memory _URI) public {
+    function addNewHouse( string memory _URI, uint _price) public {
         // Minting house
         uint houseId = houseNFT.addHouse(address(this), _URI);
 
@@ -37,6 +37,27 @@ contract RealEstateContract {
 
         // Assing house id to house (mapping)
         houseIdToHouse[houseId] = house(houseId, _price, msg.sender, true);
+
+    }
+
+    // Function that adds created house 
+    function addExisitingHouse(uint _houseId, uint _price) public {
+        // Check if user owns the house 
+        require(
+            houseIdToHouse[_houseId].owner == msg.sender,
+            "sender doesnt owns the house"
+        );
+
+        // Change mappings
+        houseIdToHouse[_houseId].isForSale = true;
+        houseIdToHouse[_houseId].price = _price;
+
+        // Send house to contract address 
+        houseNFT.transferFrom(
+            msg.sender,
+            address(this),
+            _houseId
+        );
 
 
     }
@@ -49,6 +70,11 @@ contract RealEstateContract {
             "Unvalid amount of money"
             );
 
+        // Check if house is for sale
+        require(
+            houseIdToHouse[_houseId].isForSale,
+            "House is not for sale"
+        );
         // Transfer house from contract address to buyer
         houseNFT.safeTransferFrom(
             address(this),
@@ -64,6 +90,8 @@ contract RealEstateContract {
             if( _houseId == addressToUser[previousHomeOwner].houses[i].id ) {
                 hs = addressToUser[previousHomeOwner].houses[i];
                 hs.owner = msg.sender;
+                hs.isForSale = false;
+                hs.price = 0;
                 delete addressToUser[previousHomeOwner].houses[i];
             }
         }
@@ -76,5 +104,7 @@ contract RealEstateContract {
         // Update mapping 
         houseIdToHouse[_houseId] = hs;
     }
+
+
 
 }
