@@ -8,6 +8,11 @@ contract RealEstateContract {
         string houseURI
     );
 
+    event houseSold(
+        uint houseId,
+        string houseURI
+    );
+
     House houseNFT;
 
     struct house {
@@ -111,6 +116,9 @@ contract RealEstateContract {
 
         // Update mapping 
         houseIdToHouse[_houseId] = hs;
+
+        // Emit event
+        emit houseSold(_houseId, hs.URI);
     }
 
 
