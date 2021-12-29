@@ -36,6 +36,19 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "houseId",
+						"type": "uint256"
+					}
+				],
+				"name": "houseSold",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -272,10 +285,10 @@
 			]
 		},
 		"contracts/RealEstateContract.sol": {
-			"keccak256": "0xea21dbeb182fbb2447bd3ca6ca76bf0c6c54aab34a53ccac31617592ea10391c",
+			"keccak256": "0x8f8b80ae2aad6503a258bfe47295751b12b3ed6585c272ed626b8c9ab8d3f472",
 			"urls": [
-				"bzz-raw://94765f78d79e5e20ed2a94ad02226eb4947795b8e7638c1d5a956c2b7698d39d",
-				"dweb:/ipfs/QmUKM1yQ9vcSLYTSGP8QP9EZHR9v81nb2zM79wxr26YmU8"
+				"bzz-raw://e2b0c5ce80e9db4e747a7a48c1660a85038ae76786fd668f8c770d05ad8007ef",
+				"dweb:/ipfs/QmXxm6kLGyQgj5PnVVjLVChiMuMuy88G8LGihKWo6ahFjb"
 			]
 		}
 	},

@@ -4,8 +4,8 @@
 //   deployer.deploy(NFT);
 // };
 
-const Contract = artifacts.require("RealEstateContract");
+// const Contract = artifacts.require("RealEstateContract");
 
-module.exports = function (deployer) {
-  deployer.deploy(Contract, "0x5575bEF14b31978B2543Ad55fef2C75aB044eB77");
-};
+// module.exports = function (deployer) {
+//   deployer.deploy(Contract, "0x3325A58108f46f4A829f65486144c95975d6f7Fc");
+// };

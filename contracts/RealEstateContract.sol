@@ -9,8 +9,7 @@ contract RealEstateContract {
     );
 
     event houseSold(
-        uint houseId,
-        string houseURI
+        uint houseId
     );
 
     House houseNFT;
@@ -118,9 +117,8 @@ contract RealEstateContract {
         houseIdToHouse[_houseId] = hs;
 
         // Emit event
-        emit houseSold(_houseId, hs.URI);
+        emit houseSold(_houseId);
     }
-
 
 
 }
